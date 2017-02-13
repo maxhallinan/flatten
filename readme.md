@@ -2,9 +2,8 @@
 
 Flatten nested arrays into a new array.
 
-This implementation intentionally uses no prototype methods (e.g.,
-`Array.prototype.reduce`, `Array.isArray`, etc.) or relevant language features
-(e.g., spread operator).
+This implementation intentionally uses no language methods or features; e.g.
+`Array.prototype.reduce`, `Array.isArray`, and spread operator.
 
 
 ## Usage
