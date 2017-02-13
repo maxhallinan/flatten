@@ -1,0 +1,33 @@
+{
+  "name": "flatten",
+  "version": "0.0.0",
+  "description": "flatten nested arrays into a new array",
+  "license": "MIT",
+  "repository": "maximumhallinan/flatten",
+  "author": {
+    "name": "Maximum Hallinan",
+    "email": "maxhallinan@gmail.com",
+    "url": "github.com/maximumhallinan"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "array",
+    "flatten"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "xo": "^0.17.0"
+  },
+  "xo": {
+    "space": true
+  }
+}
