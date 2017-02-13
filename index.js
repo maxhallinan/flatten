@@ -6,7 +6,7 @@
  * @returns {boolean} - `true` if value is an array, or `false`.
  */
 function isArray(value) {
-  return value.constructor === Array;
+  return value && value.constructor === Array;
 }
 
 /**
@@ -15,7 +15,7 @@ function isArray(value) {
  * @returns {boolean} - `true` if value is a function, or `false`.
  */
 function isFunction(value) {
-  return value.constructor === Function;
+  return value && value.constructor === Function;
 }
 
 /**
@@ -61,7 +61,7 @@ function reduce(array, callback, initialValue) {
  */
 function flatten(array) {
   if (!isArray(array)) {
-    throw new Error('Expected first argument to be an array');
+    throw new TypeError('Expected first argument to be an array.');
   }
 
   return (function _flatten(source, target) {
