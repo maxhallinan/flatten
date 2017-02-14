@@ -1,7 +1,31 @@
 'use strict';
 
 /**
+ * flatten nested arrays into a new array
+ * @param {Array} array - the array to flatten
+ * @returns {Array} - the new flattened array
+ */
+function flatten(array) {
+  if (!isArray(array)) {
+    throw new TypeError('Expected first argument to be an array.');
+  }
+
+  return (function _flatten(source, target) {
+    return reduce(source, function (result, value) {
+      if (isArray(value)) {
+        return _flatten(value, result);
+      }
+
+      result[result.length] = value;
+
+      return result;
+    }, target);
+  })(array, []);
+}
+
+/**
  * test if a value is an array
+ * @private
  * @param {*} value - the value to test
  * @returns {boolean} - `true` if value is an array, or `false`.
  */
@@ -11,6 +35,7 @@ function isArray(value) {
 
 /**
  * test if a value is a function
+ * @private
  * @param {*} value - the value to test
  * @returns {boolean} - `true` if value is a function, or `false`.
  */
@@ -20,6 +45,7 @@ function isFunction(value) {
 
 /**
  * reduces an array to a value by calling a function on every item in the array
+ * @private
  * @param {Array} array - the array to reduce
  * @param {reducer} callback - the function called on every item in array
  * @param {*} [initialValue] - value to use as the first argument to the first call of callback. Defaults to an array.
@@ -46,6 +72,7 @@ function reduce(array, callback, initialValue) {
 }
 
 /**
+ * @private
  * @callback reducer
  * @param {*} accumulator - the return value of the previous call or the initialValue if the first call.
  * @param {*} currentValue - the current element of the array
@@ -53,28 +80,5 @@ function reduce(array, callback, initialValue) {
  * @param {Array} array - the array supplied to `reduce`
  * @returns {*}
  */
-
-/**
- * flatten nested arrays into a new array
- * @param {Array} array - the array to flatten
- * @returns {Array} - the new flattened array
- */
-function flatten(array) {
-  if (!isArray(array)) {
-    throw new TypeError('Expected first argument to be an array.');
-  }
-
-  return (function _flatten(source, target) {
-    return reduce(source, function (result, value) {
-      if (isArray(value)) {
-        return _flatten(value, result);
-      }
-
-      result[result.length] = value;
-
-      return result;
-    }, target);
-  })(array, []);
-}
 
 module.exports = flatten;
