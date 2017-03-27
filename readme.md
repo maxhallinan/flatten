@@ -1,6 +1,6 @@
 # flatten
 
-Flatten nested arrays into a new array.
+Flatten arbitrarily nested arrays into a new array.
 
 This implementation avoids `Array` and `Array.prototype` methods, and the spread
 syntax. Just for fun.
