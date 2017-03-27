@@ -1,6 +1,6 @@
 {
   "name": "@maxhallinan/flatten",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Flatten arbitrarily nested arrays into a new array.",
   "license": "MIT",
   "repository": "maxhallinan/flatten",
