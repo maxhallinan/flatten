@@ -1,6 +1,6 @@
 {
   "name": "flattin",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Flatten arbitrarily nested arrays into a new array.",
   "license": "MIT",
   "repository": "maxhallinan/flattin",
