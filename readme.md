@@ -1,23 +1,23 @@
-# flatten
+# flattin
 
 Flatten arbitrarily nested arrays into a new array.
 
-This implementation avoids `Array` and `Array.prototype` methods, and the spread
-syntax. Just for fun.
+This implementation avoids `Array` and `Array.prototype` methods, and spread/rest.
+Just for fun.
 
 ## Usage
 
 ```js
-const flatten = require('flatten');
+const flattin = require('flattin');
 
-flatten([[1, 2, [3]], 4]);
+flattin([[1, 2, [3]], 4]);
 //=> [1, 2, 3, 4]
 ```
 
 
 ## API
 
-### flatten(array)
+### flattin(array)
 
 #### array
 

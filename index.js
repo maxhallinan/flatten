@@ -5,7 +5,7 @@
  * @param {Array} array - the array to flatten
  * @returns {Array} - the new flattened array
  */
-function flatten(array) {
+function flattin(array) {
   if (!isArray(array)) {
     throw new TypeError('Expected first argument to be an array.');
   }
@@ -81,4 +81,4 @@ function reduce(array, callback, initialValue) {
  * @returns {*}
  */
 
-module.exports = flatten;
+module.exports = flattin;

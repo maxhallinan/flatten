@@ -1,9 +1,9 @@
 {
-  "name": "@maxhallinan/flatten",
+  "name": "flattin",
   "version": "0.1.0",
   "description": "Flatten arbitrarily nested arrays into a new array.",
   "license": "MIT",
-  "repository": "maxhallinan/flatten",
+  "repository": "maxhallinan/flattin",
   "author": {
     "name": "Max Hallinan",
     "email": "maxhallinan@gmail.com",
